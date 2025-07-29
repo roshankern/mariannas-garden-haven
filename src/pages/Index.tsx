@@ -28,7 +28,7 @@ const Index = () => {
     <div className="min-h-screen bg-cottage-gradient">
       {/* Navigation Menu */}
       <nav className="flex justify-center items-center py-6">
-        <div className="flex space-x-8">
+        <div className="flex space-x-12">
           <button onClick={() => navigate('/')} className="text-foreground hover:text-primary transition-colors font-medium">
             Home
           </button>
@@ -60,29 +60,29 @@ const Index = () => {
           {/* Invisible clickable areas */}
           {/* Garden Window Area */}
           <button
-            className="absolute top-[20%] left-[35%] w-[30%] h-[40%] rounded-lg transition-all duration-300 bg-transparent"
+            className="absolute top-[15%] left-[35%] w-[30%] h-[25%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('garden')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('garden')}
-            aria-label="View Marianna's Designs"
+            aria-label="View Designs"
           />
 
           {/* Bookcase Area */}
           <button
-            className="absolute top-[15%] right-[10%] w-[25%] h-[60%] rounded-lg transition-all duration-300 bg-transparent"
+            className="absolute top-[15%] right-[10%] w-[25%] h-[30%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('bookcase')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('bookcase')}
-            aria-label="View Marianna's Teaching"
+            aria-label="View Teaching"
           />
 
           {/* Tea Area */}
           <button
-            className="absolute bottom-[25%] left-[40%] w-[20%] h-[20%] rounded-lg transition-all duration-300 bg-transparent"
+            className="absolute bottom-[35%] left-[42%] w-[16%] h-[15%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('tea')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('tea')}
-            aria-label="View What Marianna Loves"
+            aria-label="View Favorites"
           />
 
           {/* Woman/About Area */}
@@ -97,9 +97,9 @@ const Index = () => {
           {/* Hover tooltips */}
           {hoveredArea && (
             <div className={`absolute pointer-events-none ${
-              hoveredArea === 'garden' ? 'top-[55%] left-[48%] transform -translate-x-1/2' :
-              hoveredArea === 'bookcase' ? 'top-[45%] right-[22%] transform translate-x-1/2' :
-              hoveredArea === 'tea' ? 'bottom-[45%] left-[48%] transform -translate-x-1/2' :
+              hoveredArea === 'garden' ? 'top-[38%] left-[50%] transform -translate-x-1/2' :
+              hoveredArea === 'bookcase' ? 'top-[12%] right-[22%] transform translate-x-1/2' :
+              hoveredArea === 'tea' ? 'bottom-[52%] left-[50%] transform -translate-x-1/2' :
               'top-[20%] left-[15%]'
             }`}>
               <div className="bg-card/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-soft border border-border/50 animate-fade-in-up">
@@ -119,10 +119,6 @@ const Index = () => {
           <h1 className="text-6xl font-serif text-foreground tracking-wide animate-gentle-float">
             Marianna Krejci-Papa
           </h1>
-          <div className="flex items-center justify-center gap-2 text-xl text-muted-foreground italic">
-            <span>The Renaissance woman</span>
-            <Music className="w-6 h-6" />
-          </div>
         </div>
 
         {/* Navigation hint */}

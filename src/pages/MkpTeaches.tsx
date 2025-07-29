@@ -108,7 +108,7 @@ const MkpTeaches = () => {
         </button>
 
         <div className="text-center mb-12 animate-fade-in-up">
-          <h1 className="text-5xl font-serif text-foreground mb-4">MKP Teaches</h1>
+          <h1 className="text-5xl font-serif text-foreground mb-4">Teaching</h1>
           <p className="text-xl text-muted-foreground italic">
             Inspiring minds through literature and language
           </p>

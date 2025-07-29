@@ -51,7 +51,7 @@ const MkpDesigns = () => {
         </button>
 
         <div className="text-center mb-12 animate-fade-in-up">
-          <h1 className="text-5xl font-serif text-foreground mb-4">MKP Designs</h1>
+          <h1 className="text-5xl font-serif text-foreground mb-4">Designs</h1>
           <p className="text-xl text-muted-foreground italic">
             A collection of handcrafted beauty and artistic expression
           </p>

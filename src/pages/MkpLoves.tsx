@@ -40,7 +40,7 @@ const MkpLoves = () => {
         </button>
 
         <div className="text-center mb-12 animate-fade-in-up">
-          <h1 className="text-5xl font-serif text-foreground mb-4">MKP Loves</h1>
+          <h1 className="text-5xl font-serif text-foreground mb-4">Favorites</h1>
           <p className="text-xl text-muted-foreground italic flex items-center justify-center gap-2">
             <Heart className="w-6 h-6 text-primary" />
             The simple joys that make life beautiful
