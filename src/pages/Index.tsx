@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Music } from 'lucide-react';
 import cottageInterior from '@/assets/cottage-interior.jpg';
 
 const Index = () => {
@@ -24,8 +25,30 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cottage-gradient flex items-center justify-center p-4">
-      <div className="relative max-w-7xl w-full">
+    <div className="min-h-screen bg-cottage-gradient">
+      {/* Navigation Menu */}
+      <nav className="flex justify-center items-center py-6">
+        <div className="flex space-x-8">
+          <button onClick={() => navigate('/')} className="text-foreground hover:text-primary transition-colors font-medium">
+            Home
+          </button>
+          <button onClick={() => navigate('/mkp-designs')} className="text-foreground hover:text-primary transition-colors font-medium">
+            Designs
+          </button>
+          <button onClick={() => navigate('/mkp-teaches')} className="text-foreground hover:text-primary transition-colors font-medium">
+            Teaching
+          </button>
+          <button onClick={() => navigate('/mkp-loves')} className="text-foreground hover:text-primary transition-colors font-medium">
+            Favorites
+          </button>
+          <button onClick={() => navigate('/about')} className="text-foreground hover:text-primary transition-colors font-medium">
+            About
+          </button>
+        </div>
+      </nav>
+
+      <div className="flex items-center justify-center p-4">
+        <div className="relative max-w-7xl w-full">
         {/* Cottage Scene Container */}
         <div className="relative rounded-2xl overflow-hidden shadow-cottage animate-fade-in-up">
           <img 
@@ -37,9 +60,7 @@ const Index = () => {
           {/* Invisible clickable areas */}
           {/* Garden Window Area */}
           <button
-            className={`absolute top-[20%] left-[35%] w-[30%] h-[40%] rounded-lg transition-all duration-300 ${
-              hoveredArea === 'garden' ? 'bg-primary/20 shadow-glow' : 'bg-transparent hover:bg-primary/10'
-            }`}
+            className="absolute top-[20%] left-[35%] w-[30%] h-[40%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('garden')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('garden')}
@@ -48,9 +69,7 @@ const Index = () => {
 
           {/* Bookcase Area */}
           <button
-            className={`absolute top-[15%] right-[10%] w-[25%] h-[60%] rounded-lg transition-all duration-300 ${
-              hoveredArea === 'bookcase' ? 'bg-secondary/30 shadow-glow' : 'bg-transparent hover:bg-secondary/15'
-            }`}
+            className="absolute top-[15%] right-[10%] w-[25%] h-[60%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('bookcase')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('bookcase')}
@@ -59,9 +78,7 @@ const Index = () => {
 
           {/* Tea Area */}
           <button
-            className={`absolute bottom-[25%] left-[40%] w-[20%] h-[20%] rounded-lg transition-all duration-300 ${
-              hoveredArea === 'tea' ? 'bg-accent/40 shadow-glow' : 'bg-transparent hover:bg-accent/20'
-            }`}
+            className="absolute bottom-[25%] left-[40%] w-[20%] h-[20%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('tea')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('tea')}
@@ -70,9 +87,7 @@ const Index = () => {
 
           {/* Woman/About Area */}
           <button
-            className={`absolute top-[25%] left-[10%] w-[25%] h-[50%] rounded-lg transition-all duration-300 ${
-              hoveredArea === 'woman' ? 'bg-primary-glow/25 shadow-glow' : 'bg-transparent hover:bg-primary-glow/15'
-            }`}
+            className="absolute top-[25%] left-[10%] w-[25%] h-[50%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('woman')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('woman')}
@@ -82,16 +97,16 @@ const Index = () => {
           {/* Hover tooltips */}
           {hoveredArea && (
             <div className={`absolute pointer-events-none ${
-              hoveredArea === 'garden' ? 'top-[15%] left-[45%]' :
-              hoveredArea === 'bookcase' ? 'top-[10%] right-[15%]' :
-              hoveredArea === 'tea' ? 'bottom-[20%] left-[45%]' :
+              hoveredArea === 'garden' ? 'top-[55%] left-[48%] transform -translate-x-1/2' :
+              hoveredArea === 'bookcase' ? 'top-[45%] right-[22%] transform translate-x-1/2' :
+              hoveredArea === 'tea' ? 'bottom-[45%] left-[48%] transform -translate-x-1/2' :
               'top-[20%] left-[15%]'
             }`}>
               <div className="bg-card/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-soft border border-border/50 animate-fade-in-up">
                 <p className="text-card-foreground font-medium">
-                  {hoveredArea === 'garden' && 'MKP Designs'}
-                  {hoveredArea === 'bookcase' && 'MKP Teaches'}
-                  {hoveredArea === 'tea' && 'MKP Loves'}
+                  {hoveredArea === 'garden' && 'Designs'}
+                  {hoveredArea === 'bookcase' && 'Teaching'}
+                  {hoveredArea === 'tea' && 'Favorites'}
                   {hoveredArea === 'woman' && 'About Marianna'}
                 </p>
               </div>
@@ -104,9 +119,10 @@ const Index = () => {
           <h1 className="text-6xl font-serif text-foreground tracking-wide animate-gentle-float">
             Marianna Krejci-Papa
           </h1>
-          <p className="text-xl text-muted-foreground italic">
-            Artist • Teacher • Lover of Beauty
-          </p>
+          <div className="flex items-center justify-center gap-2 text-xl text-muted-foreground italic">
+            <span>The Renaissance woman</span>
+            <Music className="w-6 h-6" />
+          </div>
         </div>
 
         {/* Navigation hint */}
@@ -116,6 +132,7 @@ const Index = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };
