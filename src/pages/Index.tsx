@@ -60,7 +60,7 @@ const Index = () => {
           {/* Invisible clickable areas */}
           {/* Garden Window Area */}
           <button
-            className="absolute top-[15%] left-[35%] w-[30%] h-[25%] rounded-lg transition-all duration-300 bg-transparent"
+            className="absolute top-[5%] left-[35%] w-[30%] h-[15%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('garden')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('garden')}
@@ -78,7 +78,7 @@ const Index = () => {
 
           {/* Tea Area */}
           <button
-            className="absolute bottom-[35%] left-[42%] w-[16%] h-[15%] rounded-lg transition-all duration-300 bg-transparent"
+            className="absolute bottom-[25%] left-[42%] w-[16%] h-[20%] rounded-lg transition-all duration-300 bg-transparent"
             onMouseEnter={() => setHoveredArea('tea')}
             onMouseLeave={() => setHoveredArea(null)}
             onClick={() => handleAreaClick('tea')}
@@ -97,9 +97,9 @@ const Index = () => {
           {/* Hover tooltips */}
           {hoveredArea && (
             <div className={`absolute pointer-events-none ${
-              hoveredArea === 'garden' ? 'top-[38%] left-[50%] transform -translate-x-1/2' :
+              hoveredArea === 'garden' ? 'top-[22%] left-[50%] transform -translate-x-1/2' :
               hoveredArea === 'bookcase' ? 'top-[12%] right-[22%] transform translate-x-1/2' :
-              hoveredArea === 'tea' ? 'bottom-[52%] left-[50%] transform -translate-x-1/2' :
+              hoveredArea === 'tea' ? 'bottom-[47%] left-[50%] transform -translate-x-1/2' :
               'top-[20%] left-[15%]'
             }`}>
               <div className="bg-card/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-soft border border-border/50 animate-fade-in-up">
