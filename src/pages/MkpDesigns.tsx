@@ -1,4 +1,4 @@
-import { ArrowLeft, Palette, Scissors, Package, BookOpen } from 'lucide-react';
+import { ArrowLeft, Gem, Scissors, Package, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -62,8 +62,8 @@ const MkpDesigns = () => {
           <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm">
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-2xl">
-                <Palette className="w-6 h-6 text-primary" />
-                Jewelry & Beading Designs
+                <Gem className="w-6 h-6 text-primary" />
+                MKP Designs
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -115,7 +115,7 @@ const MkpDesigns = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-2xl">
                 <Package className="w-6 h-6 text-accent-foreground" />
-                Available Craft Kits
+                Craft Kits
               </CardTitle>
             </CardHeader>
             <CardContent>
