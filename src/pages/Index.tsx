@@ -9,16 +9,16 @@ const Index = () => {
 
   const handleAreaClick = (area: string) => {
     switch (area) {
-      case 'garden':
+      case 'designs':
         navigate('/mkp-designs');
         break;
-      case 'bookcase':
+      case 'teaching':
         navigate('/mkp-teaches');
         break;
-      case 'tea':
+      case 'favorites':
         navigate('/mkp-loves');
         break;
-      case 'woman':
+      case 'about':
         navigate('/about');
         break;
     }
@@ -61,8 +61,8 @@ const Index = () => {
           {/* Garden Window Circle */}
           <div 
             className="absolute top-[10%] left-[47%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
-            onClick={() => handleAreaClick('garden')}
-            onMouseEnter={() => setHoveredArea('garden')}
+            onClick={() => handleAreaClick('designs')}
+            onMouseEnter={() => setHoveredArea('designs')}
             onMouseLeave={() => setHoveredArea(null)}
             aria-label="View Designs"
           />
@@ -70,8 +70,8 @@ const Index = () => {
           {/* Bookcase Circle */}
           <div 
             className="absolute top-[27%] right-[20%] w-16 h-16 bg-white rounded-full pointer-events-auto transform translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
-            onClick={() => handleAreaClick('bookcase')}
-            onMouseEnter={() => setHoveredArea('bookcase')}
+            onClick={() => handleAreaClick('teaching')}
+            onMouseEnter={() => setHoveredArea('teaching')}
             onMouseLeave={() => setHoveredArea(null)}
             aria-label="View Teaching"
           />
@@ -79,8 +79,8 @@ const Index = () => {
           {/* Tea Circle */}
           <div 
             className="absolute bottom-[38%] left-[50%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
-            onClick={() => handleAreaClick('tea')}
-            onMouseEnter={() => setHoveredArea('tea')}
+            onClick={() => handleAreaClick('favorites')}
+            onMouseEnter={() => setHoveredArea('favorites')}
             onMouseLeave={() => setHoveredArea(null)}
             aria-label="View Favorites"
           />
@@ -88,8 +88,8 @@ const Index = () => {
           {/* Woman/About Circle */}
           <div 
             className="absolute top-[47%] left-[22%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
-            onClick={() => handleAreaClick('woman')}
-            onMouseEnter={() => setHoveredArea('woman')}
+            onClick={() => handleAreaClick('about')}
+            onMouseEnter={() => setHoveredArea('about')}
             onMouseLeave={() => setHoveredArea(null)}
             aria-label="About"
           />
@@ -97,17 +97,17 @@ const Index = () => {
           {/* Hover tooltips */}
           {hoveredArea && (
             <div className={`absolute pointer-events-none ${
-              hoveredArea === 'garden' ? 'top-[22%] left-[50%] transform -translate-x-1/2' :
-              hoveredArea === 'bookcase' ? 'top-[12%] right-[22%] transform translate-x-1/2' :
-              hoveredArea === 'tea' ? 'bottom-[47%] left-[50%] transform -translate-x-1/2' :
+              hoveredArea === 'designs' ? 'top-[22%] left-[50%] transform -translate-x-1/2' :
+              hoveredArea === 'teaching' ? 'top-[12%] right-[22%] transform translate-x-1/2' :
+              hoveredArea === 'favorites' ? 'bottom-[47%] left-[50%] transform -translate-x-1/2' :
               'top-[20%] left-[15%]'
             }`}>
               <div className="bg-card/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-soft border border-border/50 animate-fade-in-up">
                 <p className="text-card-foreground font-medium">
-                  {hoveredArea === 'garden' && 'Designs'}
-                  {hoveredArea === 'bookcase' && 'Teaching'}
-                  {hoveredArea === 'tea' && 'Favorites'}
-                  {hoveredArea === 'woman' && 'About Marianna'}
+                  {hoveredArea === 'designs' && 'Designs'}
+                  {hoveredArea === 'teaching' && 'Teaching'}
+                  {hoveredArea === 'favorites' && 'Favorites'}
+                  {hoveredArea === 'about' && 'About Marianna'}
                 </p>
               </div>
             </div>
