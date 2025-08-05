@@ -1,53 +1,107 @@
-# Welcome to your Lovable project
+# Marianna's Garden Haven
 
-## Project info
+A modern, responsive portfolio website for Marianna Krejci-Papa - Artist, educator, and lover of beautiful things. Featuring handcrafted jewelry, teaching expertise, and creative inspiration.
 
-**URL**: https://lovable.dev/projects/8f2d2b73-d063-4201-a8a0-ba9a39075aa4
+## Features
 
-## How can I edit this code?
+- **Responsive Design**: Optimized for all devices and screen sizes
+- **Modern UI**: Built with React, TypeScript, and Tailwind CSS
+- **Interactive Elements**: Engaging animations and hover effects
+- **Portfolio Showcase**: Beautiful display of artistic work and creations
+- **Professional Presentation**: Clean, elegant design reflecting artistry and craftsmanship
 
-There are several ways of editing your application.
+## Development
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8f2d2b73-d063-4201-a8a0-ba9a39075aa4) and start prompting.
+- Node.js 18+ or Bun
+- npm, yarn, or bun package manager
 
-Changes made via Lovable will be committed automatically to this repo.
+### Getting Started
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd mariannas-garden-haven
 ```
 
-**Edit a file directly in GitHub**
+2. Install dependencies:
+```bash
+# Using bun (recommended)
+bun install
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# Using npm
+npm install
 
-**Use GitHub Codespaces**
+# Using yarn
+yarn install
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
+3. Start the development server:
+```bash
+# Using bun
+bun run dev
+
+# Using npm
+npm run dev
+
+# Using yarn
+yarn dev
+```
+
+4. Open your browser and navigate to `http://localhost:8080`
+
+### Build for Production
+
+```bash
+# Using bun
+bun run build
+
+# Using npm
+npm run build
+
+# Using yarn
+yarn build
+```
+
+## Tech Stack
+
+- **Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **UI Components**: shadcn/ui
+- **Build Tool**: Vite
+- **Package Manager**: Bun
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   └── ui/             # shadcn/ui components
+├── pages/              # Page components
+│   ├── Index.tsx       # Home page
+│   ├── About.tsx       # About page
+│   ├── MkpDesigns.tsx  # Designs showcase
+│   ├── MkpLoves.tsx    # Favorites/Loves
+│   ├── MkpTeaches.tsx  # Teaching portfolio
+│   └── NotFound.tsx    # 404 page
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── assets/             # Static assets
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Make your changes and commit: `git commit -m 'Add new feature'`
+4. Push to the branch: `git push origin feature/new-feature`
+5. Submit a pull request
+
+## License
+
+This project is private and proprietary to Marianna Krejci-Papa.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
 ## What technologies are used for this project?
