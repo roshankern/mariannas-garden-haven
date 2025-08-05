@@ -40,7 +40,7 @@ const Index = () => {
           {/* Navigation hint */}
           <div className="mt-6">
             <p className="text-muted-foreground text-sm">
-              Hover over different areas of the cottage to explore Marianna's world
+              Explore the cottage to discover Marianna's world!
             </p>
           </div>
         </div>
