@@ -57,41 +57,41 @@ const Index = () => {
             className="w-full h-auto"
           />
           
-          {/* Invisible clickable areas */}
-          {/* Garden Window Area */}
-          <button
-            className="absolute top-[5%] left-[35%] w-[30%] h-[15%] rounded-lg transition-all duration-300 bg-transparent"
+          {/* White circles as visual indicators */}
+          {/* Garden Window Circle */}
+          <div 
+            className="absolute top-[10%] left-[47%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            onClick={() => handleAreaClick('garden')}
             onMouseEnter={() => setHoveredArea('garden')}
             onMouseLeave={() => setHoveredArea(null)}
-            onClick={() => handleAreaClick('garden')}
             aria-label="View Designs"
           />
-
-          {/* Bookcase Area */}
-          <button
-            className="absolute top-[15%] right-[10%] w-[25%] h-[30%] rounded-lg transition-all duration-300 bg-transparent"
+          
+          {/* Bookcase Circle */}
+          <div 
+            className="absolute top-[27%] right-[20%] w-16 h-16 bg-white rounded-full pointer-events-auto transform translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            onClick={() => handleAreaClick('bookcase')}
             onMouseEnter={() => setHoveredArea('bookcase')}
             onMouseLeave={() => setHoveredArea(null)}
-            onClick={() => handleAreaClick('bookcase')}
             aria-label="View Teaching"
           />
-
-          {/* Tea Area */}
-          <button
-            className="absolute bottom-[25%] left-[42%] w-[16%] h-[20%] rounded-lg transition-all duration-300 bg-transparent"
+          
+          {/* Tea Circle */}
+          <div 
+            className="absolute bottom-[38%] left-[50%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            onClick={() => handleAreaClick('tea')}
             onMouseEnter={() => setHoveredArea('tea')}
             onMouseLeave={() => setHoveredArea(null)}
-            onClick={() => handleAreaClick('tea')}
             aria-label="View Favorites"
           />
-
-          {/* Woman/About Area */}
-          <button
-            className="absolute top-[25%] left-[10%] w-[25%] h-[50%] rounded-lg transition-all duration-300 bg-transparent"
+          
+          {/* Woman/About Circle */}
+          <div 
+            className="absolute top-[47%] left-[22%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            onClick={() => handleAreaClick('woman')}
             onMouseEnter={() => setHoveredArea('woman')}
             onMouseLeave={() => setHoveredArea(null)}
-            onClick={() => handleAreaClick('woman')}
-            aria-label="About Marianna"
+            aria-label="About"
           />
 
           {/* Hover tooltips */}
