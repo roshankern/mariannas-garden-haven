@@ -25,17 +25,34 @@ const Index = () => {
   };
 
   return (
-    <div className="h-screen bg-cottage-gradient flex flex-col justify-evenly">
-      {/* Main Content Area - Flexible Height */}
-      <div className="flex items-center justify-center p-8">
-        <div className="relative max-w-5xl w-full h-full flex items-center justify-center">
-        {/* Cottage Scene Container - Responsive Size */}
-        <div className="relative rounded-2xl overflow-hidden shadow-cottage animate-fade-in-up max-h-full max-w-full">
-          <img 
-            src={cottageInterior} 
-            alt="Marianna's Cottage Interior" 
-            className="w-full h-full object-contain"
-          />
+    <div className="h-screen bg-cottage-gradient flex items-center justify-center">
+      {/* Main Section - Centered vertically */}
+      <div className="flex flex-col items-center space-y-8 p-8">
+        {/* Title and Info Section */}
+        <div className="text-center">
+          {/* Website Title */}
+          <div className="space-y-2">
+            <h1 className="text-6xl font-serif text-foreground tracking-wide animate-gentle-float">
+              Marianna Krejci-Papa
+            </h1>
+          </div>
+
+          {/* Navigation hint */}
+          <div className="mt-6">
+            <p className="text-muted-foreground text-sm">
+              Hover over different areas of the cottage to explore Marianna's world
+            </p>
+          </div>
+        </div>
+
+        {/* Cottage Scene Container */}
+        <div className="relative max-w-6xl w-full">
+          <div className="relative rounded-2xl overflow-hidden shadow-cottage animate-fade-in-up">
+            <img 
+              src={cottageInterior} 
+              alt="Marianna's Cottage Interior" 
+              className="w-full h-auto"
+            />
           
           {/* White circles as visual indicators */}
           {/* Garden Window Circle */}
@@ -92,25 +109,9 @@ const Index = () => {
               </div>
             </div>
           )}
-        </div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="py-10">
-        {/* Website Title */}
-        <div className="text-center space-y-2">
-          <h1 className="text-8xl font-serif text-foreground tracking-wide animate-gentle-float">
-            Marianna Krejci-Papa
-          </h1>
+          </div>
         </div>
 
-        {/* Navigation hint */}
-        <div className="text-center mt-6">
-          <p className="text-muted-foreground text-sm">
-            Hover over different areas of the cottage to explore Marianna's world
-          </p>
-        </div>
       </div>
     </div>
   );
