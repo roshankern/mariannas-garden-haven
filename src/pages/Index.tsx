@@ -60,7 +60,7 @@ const Index = () => {
           {/* White circles as visual indicators */}
           {/* Garden Window Circle */}
           <div 
-            className="absolute top-[10%] left-[47%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[30%] left-[8%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('designs')}
             onMouseEnter={() => setHoveredArea('designs')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -69,7 +69,7 @@ const Index = () => {
           
           {/* Bookcase Circle */}
           <div 
-            className="absolute top-[27%] right-[20%] w-16 h-16 bg-white rounded-full pointer-events-auto transform translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[44%] right-[11%] w-16 h-16 bg-white rounded-full pointer-events-auto transform translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('teaching')}
             onMouseEnter={() => setHoveredArea('teaching')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -78,7 +78,7 @@ const Index = () => {
           
           {/* Tea Circle */}
           <div 
-            className="absolute bottom-[38%] left-[50%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute bottom-[18%] left-[58.5%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('favorites')}
             onMouseEnter={() => setHoveredArea('favorites')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -87,7 +87,7 @@ const Index = () => {
           
           {/* Woman/About Circle */}
           <div 
-            className="absolute top-[47%] left-[22%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[85%] left-[22%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('about')}
             onMouseEnter={() => setHoveredArea('about')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -97,17 +97,17 @@ const Index = () => {
           {/* Hover tooltips */}
           {hoveredArea && (
             <div className={`absolute pointer-events-none ${
-              hoveredArea === 'designs' ? 'top-[22%] left-[50%] transform -translate-x-1/2' :
-              hoveredArea === 'teaching' ? 'top-[12%] right-[22%] transform translate-x-1/2' :
-              hoveredArea === 'favorites' ? 'bottom-[47%] left-[50%] transform -translate-x-1/2' :
-              'top-[20%] left-[15%]'
+              hoveredArea === 'designs' ? 'top-[15%] left-[8%] transform -translate-x-1/2' :
+              hoveredArea === 'teaching' ? 'top-[29%] right-[11%] transform translate-x-1/2' :
+              hoveredArea === 'favorites' ? 'bottom-[26%] left-[58.5%] transform -translate-x-1/2' :
+              'top-[70%] left-[19%]'
             }`}>
               <div className="bg-card/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-soft border border-border/50 animate-fade-in-up">
                 <p className="text-card-foreground font-medium">
                   {hoveredArea === 'designs' && 'Designs'}
                   {hoveredArea === 'teaching' && 'Teaching'}
                   {hoveredArea === 'favorites' && 'Favorites'}
-                  {hoveredArea === 'about' && 'About Marianna'}
+                  {hoveredArea === 'about' && 'About'}
                 </p>
               </div>
             </div>
