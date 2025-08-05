@@ -25,36 +25,16 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-cottage-gradient">
-      {/* Navigation Menu */}
-      <nav className="flex justify-center items-center py-6">
-        <div className="flex space-x-12">
-          <button onClick={() => navigate('/')} className="text-foreground hover:text-primary transition-colors font-medium">
-            Home
-          </button>
-          <button onClick={() => navigate('/mkp-designs')} className="text-foreground hover:text-primary transition-colors font-medium">
-            Designs
-          </button>
-          <button onClick={() => navigate('/mkp-teaches')} className="text-foreground hover:text-primary transition-colors font-medium">
-            Teaching
-          </button>
-          <button onClick={() => navigate('/mkp-loves')} className="text-foreground hover:text-primary transition-colors font-medium">
-            Favorites
-          </button>
-          <button onClick={() => navigate('/about')} className="text-foreground hover:text-primary transition-colors font-medium">
-            About
-          </button>
-        </div>
-      </nav>
-
-      <div className="flex items-center justify-center p-4">
-        <div className="relative max-w-7xl w-full">
-        {/* Cottage Scene Container */}
-        <div className="relative rounded-2xl overflow-hidden shadow-cottage animate-fade-in-up">
+    <div className="h-screen bg-cottage-gradient flex flex-col justify-evenly">
+      {/* Main Content Area - Flexible Height */}
+      <div className="flex items-center justify-center p-8">
+        <div className="relative max-w-5xl w-full h-full flex items-center justify-center">
+        {/* Cottage Scene Container - Responsive Size */}
+        <div className="relative rounded-2xl overflow-hidden shadow-cottage animate-fade-in-up max-h-full max-w-full">
           <img 
             src={cottageInterior} 
             alt="Marianna's Cottage Interior" 
-            className="w-full h-auto"
+            className="w-full h-full object-contain"
           />
           
           {/* White circles as visual indicators */}
@@ -87,7 +67,7 @@ const Index = () => {
           
           {/* Woman/About Circle */}
           <div 
-            className="absolute top-[85%] left-[22%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[85%] left-[23%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('about')}
             onMouseEnter={() => setHoveredArea('about')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -113,10 +93,14 @@ const Index = () => {
             </div>
           )}
         </div>
+        </div>
+      </div>
 
+      {/* Bottom Section */}
+      <div className="py-10">
         {/* Website Title */}
-        <div className="text-center mt-8 space-y-2">
-          <h1 className="text-6xl font-serif text-foreground tracking-wide animate-gentle-float">
+        <div className="text-center space-y-2">
+          <h1 className="text-8xl font-serif text-foreground tracking-wide animate-gentle-float">
             Marianna Krejci-Papa
           </h1>
         </div>
@@ -128,7 +112,6 @@ const Index = () => {
           </p>
         </div>
       </div>
-    </div>
     </div>
   );
 };
