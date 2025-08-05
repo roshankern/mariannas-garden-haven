@@ -57,7 +57,7 @@ const Index = () => {
           {/* White circles as visual indicators */}
           {/* Garden Window Circle */}
           <div 
-            className="absolute top-[30%] left-[8%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[30%] left-[8%] w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('designs')}
             onMouseEnter={() => setHoveredArea('designs')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -66,7 +66,7 @@ const Index = () => {
           
           {/* Bookcase Circle */}
           <div 
-            className="absolute top-[44%] right-[11%] w-16 h-16 bg-white rounded-full pointer-events-auto transform translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[44%] right-[11%] w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full pointer-events-auto transform translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('teaching')}
             onMouseEnter={() => setHoveredArea('teaching')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -75,7 +75,7 @@ const Index = () => {
           
           {/* Tea Circle */}
           <div 
-            className="absolute bottom-[18%] left-[58.5%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute bottom-[18%] left-[58.5%] w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('favorites')}
             onMouseEnter={() => setHoveredArea('favorites')}
             onMouseLeave={() => setHoveredArea(null)}
@@ -84,7 +84,7 @@ const Index = () => {
           
           {/* Woman/About Circle */}
           <div 
-            className="absolute top-[85%] left-[23%] w-16 h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
+            className="absolute top-[85%] left-[23%] w-8 h-8 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-white rounded-full pointer-events-auto transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-30 hover:opacity-60 cursor-pointer"
             onClick={() => handleAreaClick('about')}
             onMouseEnter={() => setHoveredArea('about')}
             onMouseLeave={() => setHoveredArea(null)}
