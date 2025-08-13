@@ -1,9 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import teaAndTreatsImage from '@/assets/favorites/tea_and_treats.jpg';
-import paulineImage from '@/assets/favorites/IMG_2280.jpg';
-import familyImage from '@/assets/favorites/32C267AA-736F-452F-A9B1-F6DC0D58E48C.jpg';
+import teaAndTreatsImage from '@/assets/favorites/tea_and_treats.webp';
+import paulineImage from '@/assets/favorites/IMG_2280.webp';
+import familyImage from '@/assets/favorites/32C267AA-736F-452F-A9B1-F6DC0D58E48C.webp';
 
 const MkpLoves = () => {
   const navigate = useNavigate();

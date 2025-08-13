@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import cottageInterior from '@/assets/cottage-interior.jpg';
+import cottageInterior from '@/assets/cottage-interior.webp';
 
 const Index = () => {
   const navigate = useNavigate();

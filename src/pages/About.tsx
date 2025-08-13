@@ -2,7 +2,7 @@ import { ArrowLeft, Mail, Linkedin, Palette, BookOpen, Heart } from 'lucide-reac
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import aboutImage from '@/assets/about/IMG_9421_Original.jpg';
+import aboutImage from '@/assets/about/IMG_9421_Original.webp';
 
 const About = () => {
   const navigate = useNavigate();

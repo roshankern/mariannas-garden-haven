@@ -5,25 +5,25 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
 
 // Import all design images
-import design1 from '@/assets/designs/1CCCBE65-FEBD-4FC5-B362-D6A23A8709C2.jpeg';
-import design2 from '@/assets/designs/IMG_5211.jpeg';
-import design3 from '@/assets/designs/IMG_5217.jpeg';
-import design4 from '@/assets/designs/IMG_5219.jpeg';
-import design5 from '@/assets/designs/IMG_5222.jpeg';
-import design6 from '@/assets/designs/IMG_5223.jpeg';
-import design7 from '@/assets/designs/IMG_5231.jpeg';
-import design8 from '@/assets/designs/IMG_5239.jpeg';
-import design9 from '@/assets/designs/IMG_5241.jpeg';
-import design10 from '@/assets/designs/IMG_5245.jpeg';
-import design11 from '@/assets/designs/IMG_5252.jpeg';
-import design12 from '@/assets/designs/IMG_5255.jpeg';
-import design13 from '@/assets/designs/IMG_5259.jpeg';
-import design14 from '@/assets/designs/IMG_5262.jpg';
-import design15 from '@/assets/designs/IMG_5266.jpeg';
-import design16 from '@/assets/designs/IMG_5267.jpeg';
-import design17 from '@/assets/designs/IMG_5272.jpeg';
-import design18 from '@/assets/designs/IMG_6041.jpeg';
-import design19 from '@/assets/designs/IMG_6042.jpeg';
+import design1 from '@/assets/designs/1CCCBE65-FEBD-4FC5-B362-D6A23A8709C2.webp';
+import design2 from '@/assets/designs/IMG_5211.webp';
+import design3 from '@/assets/designs/IMG_5217.webp';
+import design4 from '@/assets/designs/IMG_5219.webp';
+import design5 from '@/assets/designs/IMG_5222.webp';
+import design6 from '@/assets/designs/IMG_5223.webp';
+import design7 from '@/assets/designs/IMG_5231.webp';
+import design8 from '@/assets/designs/IMG_5239.webp';
+import design9 from '@/assets/designs/IMG_5241.webp';
+import design10 from '@/assets/designs/IMG_5245.webp';
+import design11 from '@/assets/designs/IMG_5252.webp';
+import design12 from '@/assets/designs/IMG_5255.webp';
+import design13 from '@/assets/designs/IMG_5259.webp';
+import design14 from '@/assets/designs/IMG_5262.webp';
+import design15 from '@/assets/designs/IMG_5266.webp';
+import design16 from '@/assets/designs/IMG_5267.webp';
+import design17 from '@/assets/designs/IMG_5272.webp';
+import design18 from '@/assets/designs/IMG_6041.webp';
+import design19 from '@/assets/designs/IMG_6042.webp';
 
 const MkpDesigns = () => {
   const navigate = useNavigate();
