@@ -2,6 +2,7 @@ import { ArrowLeft, Mail, Linkedin, Palette, BookOpen, Heart } from 'lucide-reac
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import aboutImage from '@/assets/about/IMG_9421_Original.jpg';
 
 const About = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const About = () => {
             <div className="shadow-cottage overflow-hidden rounded-lg">
               <div className="aspect-[3/4] relative">
                 <img 
-                  src="/src/assets/about/IMG_9421_Original.jpg"
+                  src={aboutImage}
                   alt="Marianna Krejci-Papa" 
                   className="w-full h-full object-cover"
                 />

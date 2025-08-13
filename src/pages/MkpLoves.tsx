@@ -1,6 +1,9 @@
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
+import teaAndTreatsImage from '@/assets/favorites/tea_and_treats.png';
+import paulineImage from '@/assets/favorites/IMG_2280.jpg';
+import familyImage from '@/assets/favorites/32C267AA-736F-452F-A9B1-F6DC0D58E48C.jpg';
 
 const MkpLoves = () => {
   const navigate = useNavigate();
@@ -8,17 +11,17 @@ const MkpLoves = () => {
   const loves = [
     {
       title: 'Tea and Treats',
-      image: '/src/assets/favorites/tea_and_treats.png',
+      image: teaAndTreatsImage,
       description: 'Treasure the simple joys of life with a warm cup of tea and delightful treats. Whether it\'s a delicate Earl Grey in the afternoon or a robust English Breakfast to start the day, tea brings moments of peace and reflection. The warmth of the cup in my hands, the gentle steam rising, and the perfect pause it creates in a busy day - tea is my daily meditation.'
     },
     {
       title: 'Pauline',
-      image: '/src/assets/favorites/IMG_2280.jpg',
+      image: paulineImage,
       description: 'Pauline is a source of inspiration and joy. Her playful spirit and loving nature remind me to embrace life\'s adventures with an open heart. Whether we\'re sharing a quiet moment or embarking on a new journey, Pauline brings warmth and happiness to every experience.'
     },
     {
       title: 'Family',
-      image: '/src/assets/favorites/32C267AA-736F-452F-A9B1-F6DC0D58E48C.jpg',
+      image: familyImage,
       description: 'Family is the heart of everything. The laughter shared around the dinner table, the stories passed down through generations, the unconditional love that sustains us through all of life\'s adventures. Whether gathered for holidays or enjoying quiet everyday moments, family creates the foundation of love, support, and belonging that makes life truly meaningful.'
     }
   ];

@@ -4,6 +4,27 @@ import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
 
+// Import all design images
+import design1 from '@/assets/designs/1CCCBE65-FEBD-4FC5-B362-D6A23A8709C2.jpeg';
+import design2 from '@/assets/designs/IMG_5211.jpeg';
+import design3 from '@/assets/designs/IMG_5217.jpeg';
+import design4 from '@/assets/designs/IMG_5219.jpeg';
+import design5 from '@/assets/designs/IMG_5222.jpeg';
+import design6 from '@/assets/designs/IMG_5223.jpeg';
+import design7 from '@/assets/designs/IMG_5231.jpeg';
+import design8 from '@/assets/designs/IMG_5239.jpeg';
+import design9 from '@/assets/designs/IMG_5241.jpeg';
+import design10 from '@/assets/designs/IMG_5245.jpeg';
+import design11 from '@/assets/designs/IMG_5252.jpeg';
+import design12 from '@/assets/designs/IMG_5255.jpeg';
+import design13 from '@/assets/designs/IMG_5259.jpeg';
+import design14 from '@/assets/designs/IMG_5262.jpg';
+import design15 from '@/assets/designs/IMG_5266.jpeg';
+import design16 from '@/assets/designs/IMG_5267.jpeg';
+import design17 from '@/assets/designs/IMG_5272.jpeg';
+import design18 from '@/assets/designs/IMG_6041.jpeg';
+import design19 from '@/assets/designs/IMG_6042.jpeg';
+
 const MkpDesigns = () => {
   const navigate = useNavigate();
   const [api, setApi] = useState<CarouselApi>();
@@ -32,25 +53,25 @@ const MkpDesigns = () => {
 
   // Import all design images
   const designImages = [
-    '/src/assets/designs/1CCCBE65-FEBD-4FC5-B362-D6A23A8709C2.jpeg',
-    '/src/assets/designs/IMG_5211.jpeg',
-    '/src/assets/designs/IMG_5217.jpeg',
-    '/src/assets/designs/IMG_5219.jpeg',
-    '/src/assets/designs/IMG_5222.jpeg',
-    '/src/assets/designs/IMG_5223.jpeg',
-    '/src/assets/designs/IMG_5231.jpeg',
-    '/src/assets/designs/IMG_5239.jpeg',
-    '/src/assets/designs/IMG_5241.jpeg',
-    '/src/assets/designs/IMG_5245.jpeg',
-    '/src/assets/designs/IMG_5252.jpeg',
-    '/src/assets/designs/IMG_5255.jpeg',
-    '/src/assets/designs/IMG_5259.jpeg',
-    '/src/assets/designs/IMG_5262.JPG',
-    '/src/assets/designs/IMG_5266.jpeg',
-    '/src/assets/designs/IMG_5267.jpeg',
-    '/src/assets/designs/IMG_5272.jpeg',
-    '/src/assets/designs/IMG_6041.jpeg',
-    '/src/assets/designs/IMG_6042.jpeg',
+    design1,
+    design2,
+    design3,
+    design4,
+    design5,
+    design6,
+    design7,
+    design8,
+    design9,
+    design10,
+    design11,
+    design12,
+    design13,
+    design14,
+    design15,
+    design16,
+    design17,
+    design18,
+    design19,
   ];
 
   const sewingSkills = [

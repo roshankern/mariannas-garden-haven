@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Music } from 'lucide-react';
 import cottageInterior from '@/assets/cottage-interior.jpg';
 
 const Index = () => {
