@@ -6,24 +6,6 @@ import { Button } from '@/components/ui/button';
 const About = () => {
   const navigate = useNavigate();
 
-  const currentProjects = [
-    {
-      title: 'Garden-Inspired Jewelry Collection',
-      description: 'Creating a new line of handcrafted jewelry featuring botanical motifs and natural gemstones.',
-      icon: <Palette className="w-5 h-5" />
-    },
-    {
-      title: 'Interactive Literature Workshop',
-      description: 'Developing an online course that combines traditional literary analysis with modern multimedia tools.',
-      icon: <BookOpen className="w-5 h-5" />
-    },
-    {
-      title: 'Community Craft Initiative',
-      description: 'Organizing monthly craft workshops for local seniors, focusing on therapeutic art activities.',
-      icon: <Heart className="w-5 h-5" />
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-garden-gradient p-6">
       <div className="max-w-7xl mx-auto">
@@ -46,18 +28,16 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Profile Image */}
           <div className="animate-fade-in-up">
-            <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm overflow-hidden">
-              <CardContent className="p-0">
-                <div className="aspect-[3/4] relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=600"
-                    alt="Marianna Krejci-Papa" 
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-                </div>
-              </CardContent>
-            </Card>
+            <div className="shadow-cottage overflow-hidden rounded-lg">
+              <div className="aspect-[3/4] relative">
+                <img 
+                  src="/src/assets/about/IMG_9421_Original.jpg"
+                  alt="Marianna Krejci-Papa" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              </div>
+            </div>
           </div>
 
           {/* Bio Content */}
