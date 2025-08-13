@@ -31,10 +31,10 @@ const MkpDesigns = () => {
 
   const craftKits = [
     { name: 'Wrapping Paper Making', description: 'Create beautiful custom gift wrap' },
-    { name: 'Beading for Kids', description: 'Fun jewelry projects for children' },
+    { name: 'Beading for Kids', description: 'Fun jewelry projects' },
     { name: 'Fun with Stencils', description: 'Decorative art using stencil techniques' },
     { name: 'Zentangle Basics', description: 'Meditative drawing patterns' },
-    { name: 'Embroidery Starter', description: 'Basic embroidery stitches and projects' },
+    { name: 'Freeze Dance', description: 'Fun movement and dance activities' },
     { name: 'Card Making', description: 'Handmade greeting cards for any occasion' }
   ];
 
@@ -115,7 +115,7 @@ const MkpDesigns = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-2xl">
                 <Package className="w-6 h-6 text-accent-foreground" />
-                Craft Kits
+                Art with Kids
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -127,34 +127,6 @@ const MkpDesigns = () => {
                   >
                     <h3 className="font-semibold text-accent-foreground mb-2">{kit.name}</h3>
                     <p className="text-sm text-accent-foreground/80">{kit.description}</p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Adult Coloring Books */}
-        <section className="mb-16">
-          <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-3 text-2xl">
-                <BookOpen className="w-6 h-6 text-primary" />
-                Adult Coloring Books
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {coloringImages.map((image, index) => (
-                  <div 
-                    key={index} 
-                    className="aspect-[3/4] rounded-lg overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:scale-105"
-                  >
-                    <img 
-                      src={image} 
-                      alt={`Coloring book ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
                   </div>
                 ))}
               </div>
