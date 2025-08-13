@@ -1,21 +1,32 @@
 import { ArrowLeft, Gem, Scissors, Package, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 const MkpDesigns = () => {
   const navigate = useNavigate();
 
-  const jewelryImages = [
-    'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400',
-    'https://images.unsplash.com/photo-1506629905962-b4ba886fe9d8?w=400',
-    'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400',
-    'https://images.unsplash.com/photo-1506629905962-b4ba886fe9d8?w=400'
-  ];
-
-  const coloringImages = [
-    'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400',
-    'https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400',
-    'https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400'
+  // Import all design images
+  const designImages = [
+    '/src/assets/designs/1CCCBE65-FEBD-4FC5-B362-D6A23A8709C2.jpeg',
+    '/src/assets/designs/IMG_5211.jpeg',
+    '/src/assets/designs/IMG_5217.jpeg',
+    '/src/assets/designs/IMG_5219.jpeg',
+    '/src/assets/designs/IMG_5222.jpeg',
+    '/src/assets/designs/IMG_5223.jpeg',
+    '/src/assets/designs/IMG_5231.jpeg',
+    '/src/assets/designs/IMG_5239.jpeg',
+    '/src/assets/designs/IMG_5241.jpeg',
+    '/src/assets/designs/IMG_5245.jpeg',
+    '/src/assets/designs/IMG_5252.jpeg',
+    '/src/assets/designs/IMG_5255.jpeg',
+    '/src/assets/designs/IMG_5259.jpeg',
+    '/src/assets/designs/IMG_5262.JPG',
+    '/src/assets/designs/IMG_5266.jpeg',
+    '/src/assets/designs/IMG_5267.jpeg',
+    '/src/assets/designs/IMG_5272.jpeg',
+    '/src/assets/designs/IMG_6041.jpeg',
+    '/src/assets/designs/IMG_6042.jpeg',
   ];
 
   const sewingSkills = [
@@ -67,20 +78,29 @@ const MkpDesigns = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {jewelryImages.map((image, index) => (
-                  <div 
-                    key={index} 
-                    className="aspect-square rounded-lg overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:scale-105"
-                  >
-                    <img 
-                      src={image} 
-                      alt={`Jewelry piece ${index + 1}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-5xl mx-auto"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {designImages.map((image, index) => (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                      <div className="aspect-square rounded-lg overflow-hidden shadow-soft hover:shadow-glow transition-all duration-300 hover:scale-105">
+                        <img 
+                          src={image} 
+                          alt={`MKP Design ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="-left-8 md:-left-12" />
+                <CarouselNext className="-right-8 md:-right-12" />
+              </Carousel>
             </CardContent>
           </Card>
         </section>
