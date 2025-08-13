@@ -1,10 +1,34 @@
 import { ArrowLeft, Gem, Scissors, Package, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
 
 const MkpDesigns = () => {
   const navigate = useNavigate();
+  const [api, setApi] = useState<CarouselApi>();
+  const intervalRef = useRef<NodeJS.Timeout>();
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!api) return;
+
+    const startAutoScroll = () => {
+      intervalRef.current = setInterval(() => {
+        api.scrollNext();
+      }, 4000); // Slower interval for smoother perception
+    };
+
+    const stopAutoScroll = () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+
+    startAutoScroll();
+
+    return () => stopAutoScroll();
+  }, [api]);
 
   // Import all design images
   const designImages = [
@@ -79,9 +103,12 @@ const MkpDesigns = () => {
             </CardHeader>
             <CardContent>
               <Carousel
+                setApi={setApi}
                 opts={{
                   align: "start",
                   loop: true,
+                  duration: 25, // Smoother transition duration
+                  dragFree: true, // Enable free drag for smoother interaction
                 }}
                 className="w-full max-w-5xl mx-auto"
               >
@@ -98,8 +125,6 @@ const MkpDesigns = () => {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="-left-8 md:-left-12" />
-                <CarouselNext className="-right-8 md:-right-12" />
               </Carousel>
             </CardContent>
           </Card>
