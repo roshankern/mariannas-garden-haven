@@ -12,8 +12,8 @@ const MkpTeaches = () => {
 
   const courses = [
     { name: 'British Literature', description: 'Exploring the rich tradition of British literary works' },
-    { name: 'Shakespeare Studies', description: 'Deep dive into the works of the Bard' },
-    { name: 'The International Short Story', description: 'Global perspectives through short fiction' },
+    { name: 'Journalism and Writing', description: 'Techniques for effective reporting and storytelling' },
+    { name: 'The International Short Short Story', description: 'Global perspectives through short fiction' },
     { name: 'Writing for Stage and Screen', description: 'Crafting compelling dramatic narratives' },
     { name: 'Linguistics', description: 'The science and art of language' },
     { name: 'English as a Second Language', description: 'Helping students master English communication' }
@@ -45,38 +45,26 @@ const MkpTeaches = () => {
   const recommendations = {
     'Books': [
       'Pride and Prejudice by Jane Austen',
-      'The Great Gatsby by F. Scott Fitzgerald',
-      'Beloved by Toni Morrison',
-      'One Hundred Years of Solitude by Gabriel García Márquez',
-      'The Handmaid\'s Tale by Margaret Atwood'
+      'Jane Eyre by Charlotte Brontë',
+      'Much Ado About Nothing by William Shakespeare',
     ],
     'Movies': [
-      'Dead Poets Society (1989)',
-      'The Hours (2002)',
-      'Adaptation (2002)',
+      'She\'s The Man (2006)',
       'Shakespeare in Love (1998)',
-      'Finding Forrester (2000)'
     ],
     'Textbooks': [
       'The Norton Anthology of English Literature',
-      'A Handbook to Literature by William Harmon',
-      'The Art of Fiction by John Gardner',
-      'Bird by Bird by Anne Lamott',
-      'The Cambridge Introduction to Narrative'
     ],
     'Short Stories': [
       'The Lottery by Shirley Jackson',
-      'A Good Man Is Hard to Find by Flannery O\'Connor',
-      'The Yellow Wallpaper by Charlotte Perkins Gilman',
-      'Hills Like White Elephants by Ernest Hemingway',
-      'The Things They Carried by Tim O\'Brien'
+      'The Raven by Edgar Allan Poe',
+      'The Necklace by Guy de Maupassant',
+      'The Red Chief by O. Henry',
     ],
     'Authors': [
-      'Virginia Woolf',
-      'Jorge Luis Borges',
-      'Alice Munro',
-      'James Joyce',
-      'Chinua Achebe'
+      'Jane Austen',
+      'Shakespeare',
+      'Edgar Allan Poe',
     ]
   };
 
@@ -139,7 +127,7 @@ const MkpTeaches = () => {
           </Card>
         </section>
 
-        {/* Student Testimonials */}
+        {/* Student Testimonials
         <section className="mb-16">
           <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm">
             <CardHeader>
@@ -192,6 +180,7 @@ const MkpTeaches = () => {
             </CardContent>
           </Card>
         </section>
+        */}
 
         {/* MKP Recommends */}
         <section className="mb-16">
