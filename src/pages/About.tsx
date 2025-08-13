@@ -64,7 +64,7 @@ const About = () => {
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
             <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-serif text-foreground mb-6">Who I Am</h2>
+                <h2 className="text-3xl font-serif text-foreground mb-6 text-center">Who I Am</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
                     Welcome to my world! I'm Marianna Krejci-Papa, a passionate educator, artist, and lifelong learner who believes that beauty can be found in every corner of life. With decades of experience in teaching literature and language, I've had the privilege of inspiring countless students to discover the magic of words and stories.
@@ -84,49 +84,21 @@ const About = () => {
           </div>
         </div>
 
-        {/* Current Projects */}
-        <section className="mb-16">
-          <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-3xl font-serif text-center">What I'm Currently Working On</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {currentProjects.map((project, index) => (
-                  <div 
-                    key={index}
-                    className="bg-secondary/30 rounded-xl p-6 hover:bg-secondary/50 transition-all duration-300 hover:shadow-glow border border-border/30 animate-fade-in-up"
-                    style={{ animationDelay: `${index * 0.1}s` }}
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-primary/20 rounded-lg text-primary">
-                        {project.icon}
-                      </div>
-                      <h3 className="font-semibold text-secondary-foreground">{project.title}</h3>
-                    </div>
-                    <p className="text-sm text-secondary-foreground/80 leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
         {/* Contact Section */}
         <section className="mb-8">
           <Card className="shadow-cottage border-border/50 bg-card/95 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle className="text-2xl font-serif text-center">Let's Connect</CardTitle>
-            </CardHeader>
-            <CardContent>
+            <CardContent className="p-8">
+              <h2 className="text-3xl font-serif text-foreground mb-6 text-center">Let's Connect</h2>
+              <p className="text-center text-muted-foreground mb-6">
+                I'd love to hear from you! Whether you have questions about my work, want to collaborate, 
+                or simply wish to share your own creative journey, don't hesitate to reach out.
+              </p>
               <div className="flex justify-center gap-6">
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="flex items-center gap-3 hover:bg-primary/20 border-primary/30"
-                  onClick={() => window.location.href = 'mailto:marianna@example.com'}
+                  onClick={() => window.location.href = 'mailto:mkp@mariannakrejcipapa.com'}
                 >
                   <Mail className="w-5 h-5" />
                   Email Me
@@ -141,10 +113,6 @@ const About = () => {
                   LinkedIn
                 </Button>
               </div>
-              <p className="text-center text-muted-foreground mt-6">
-                I'd love to hear from you! Whether you have questions about my work, want to collaborate, 
-                or simply wish to share your own creative journey, don't hesitate to reach out.
-              </p>
             </CardContent>
           </Card>
         </section>
