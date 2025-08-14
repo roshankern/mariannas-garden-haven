@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import cottageInterior from '@/assets/cottage-interior.webp';
+import { usePreloadImages } from '@/hooks/use-preload-images';
 
 const Index = () => {
   const navigate = useNavigate();
   const [hoveredArea, setHoveredArea] = useState<string | null>(null);
+  const { isPreloading, progress } = usePreloadImages();
 
   const handleAreaClick = (area: string) => {
     switch (area) {
@@ -110,6 +112,18 @@ const Index = () => {
           )}
           </div>
         </div>
+
+        {/* Preloading indicator */}
+        {isPreloading && (
+          <div className="fixed bottom-4 right-4 bg-card/95 backdrop-blur-sm rounded-lg px-4 py-2 shadow-soft border border-border/50 animate-fade-in-up">
+            <div className="flex items-center gap-3">
+              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
+              <span className="text-sm text-muted-foreground">
+                Loading gallery images... {progress}%
+              </span>
+            </div>
+          </div>
+        )}
 
       </div>
     </div>
